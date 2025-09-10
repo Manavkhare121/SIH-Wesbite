@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import "./Navbar.css";
 import studentimage from "../../../assets/Student image.webp";
 import Sidebar from "../SidebarForAdmin/Sidebar2";
-import Dashboard from '../DashboardForAdmin/Dashboard.jsx'
+import Dashboard from '../DashboardForAdmin/Dashboard.jsx';
+import Booking from "../BookingStatus/booking.jsx";
 
 const Navbar = () => {
   const [extended, setExtended] = useState(false);
@@ -26,16 +27,16 @@ const Navbar = () => {
           </div>
         </div>
 
-        
         <div className="page-content">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="" element={<Dashboard />} />       
+            <Route path="Booking" element={<Booking />} /> 
           </Routes>
         </div>
-
       </div>
     </div>
   );
 };
 
 export default Navbar;
+

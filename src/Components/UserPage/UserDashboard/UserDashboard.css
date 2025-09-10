@@ -1,0 +1,103 @@
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.user-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.user-dark {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.user-banner {
+  width: 100%;
+  max-width: 72rem;
+  height: 25rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.user-quote {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 48rem;
+  color: #4b5563;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 72rem;
+}
+
+@media (min-width: 640px) {
+  .user-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .user-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.user-card {
+  background-color: #c5dae1;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.02);
+}
+
+.user-card-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.user-blue {
+  color: #2563eb;
+}
+
+.user-green {
+  color: #16a34a;
+}
+
+.user-purple {
+  color: #9333ea;
+}
+
+.user-red {
+  color: #dc2626;
+}
+
+.user-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.user-card-subtext {
+  font-size: 0.875rem;
+  color: #6b7280;
+}

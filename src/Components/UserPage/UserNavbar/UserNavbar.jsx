@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import './UserNavbar.css';
+import userimage from '../../../assets/Student image.webp';
+import UserSidebar from "../../UserPage/UserSidebar/UserSidebar";
+import UserDashboard from '../UserDashboard/UserDashboard.jsx';
+import { Routes, Route } from 'react-router-dom';
+
+const UserNavbar = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <>
+      <div className="user-layout">
+        <UserSidebar expanded={expanded} setExpanded={setExpanded} />
+        <div
+          className={`user-main-content ${
+            expanded ? "user-sidebar-expanded" : "user-sidebar-collapsed"
+          }`}
+        >
+          <div className="user-navbar">
+            <div className="user-navbar-icon">
+              <img src={userimage} alt="logo" />
+            </div>
+            <div className="user-navbar-text">
+              <p>Home</p>
+              <p>Services</p>
+              <p>Login</p>
+              <div className="user-signup">
+                <p>SignUp</p>
+              </div>
+            </div>
+          </div>
+           <div className="pages">
+          <Routes>
+            <Route path="/UserDashboard" element={<UserDashboard />} />
+            
+          </Routes>
+        </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default UserNavbar;
+
+

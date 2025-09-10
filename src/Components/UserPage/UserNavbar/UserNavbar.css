@@ -1,30 +1,25 @@
-
-.layout {
+.user-layout {
   display: flex;
   height: 100vh;
-  
 }
 
-
-.sidebar-expanded {
-  margin-left: 250px; 
+.user-sidebar-expanded {
+  margin-left: 250px;
   transition: margin-left 0.3s ease;
 }
 
-.sidebar-collapsed {
-  margin-left: 80px; 
+.user-sidebar-collapsed {
+  margin-left: 80px;
   transition: margin-left 0.3s ease;
 }
 
-
-.main-content {
+.user-main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-
-.navbar {
+.user-navbar {
   height: 80px;
   width: calc(100% - 40px);
   background-color: #fff;
@@ -40,39 +35,35 @@
   transition: all 0.3s ease;
 }
 
-
-.sidebar-expanded .navbar {
-  
-  width: calc(100% - 290px); 
+.user-sidebar-expanded .user-navbar {
+  width: calc(100% - 290px);
 }
 
-.sidebar-collapsed .navbar {
-  margin-left:25px;
-  width: calc(100% - 120px); 
+.user-sidebar-collapsed .user-navbar {
+  margin-left: 25px;
+  width: calc(100% - 120px);
 }
 
-
-.navbar-icon {
+.user-navbar-icon {
   position: absolute;
   top: -60px;
   left: 20px;
 }
 
-.navbar-icon img {
+.user-navbar-icon img {
   height: 180px;
   width: 180px;
   margin-top: 5px;
   object-fit: contain;
 }
 
-
-.navbar-text {
+.user-navbar-text {
   display: flex;
   gap: 4rem;
   align-items: center;
 }
 
-.navbar-text p {
+.user-navbar-text p {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -83,7 +74,7 @@
   transition: color 0.2s;
 }
 
-.navbar-text p::after {
+.user-navbar-text p::after {
   content: "";
   position: absolute;
   left: 0;
@@ -94,16 +85,15 @@
   transition: width 0.3s ease-in-out;
 }
 
-.navbar-text p:hover {
+.user-navbar-text p:hover {
   color: #0C7FDA;
 }
 
-.navbar-text p:hover::after {
+.user-navbar-text p:hover::after {
   width: 100%;
 }
 
-
-.signup {
+.user-signup {
   background-color: #E9F5FE;
   color: #0C7FDA;
   padding: 7px 35px;
@@ -115,6 +105,6 @@
   cursor: pointer;
 }
 
-.signup p::after {
+.user-signup p::after {
   display: none;
 }

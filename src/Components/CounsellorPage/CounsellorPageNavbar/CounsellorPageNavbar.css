@@ -1,30 +1,25 @@
-
-.layout {
+.counsellor-layout {
   display: flex;
   height: 100vh;
-  
 }
 
-
-.sidebar-expanded {
-  margin-left: 250px; 
+.counsellor-sidebar-expanded {
+  margin-left: 250px;
   transition: margin-left 0.3s ease;
 }
 
-.sidebar-collapsed {
-  margin-left: 80px; 
+.counsellor-sidebar-collapsed {
+  margin-left: 80px;
   transition: margin-left 0.3s ease;
 }
 
-
-.main-content {
+.counsellor-main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-
-.navbar {
+.counsellor-navbar {
   height: 80px;
   width: calc(100% - 40px);
   background-color: #fff;
@@ -40,39 +35,35 @@
   transition: all 0.3s ease;
 }
 
-
-.sidebar-expanded .navbar {
-  
-  width: calc(100% - 290px); 
+.counsellor-sidebar-expanded .counsellor-navbar {
+  width: calc(100% - 290px);
 }
 
-.sidebar-collapsed .navbar {
-  margin-left:25px;
-  width: calc(100% - 120px); 
+.counsellor-sidebar-collapsed .counsellor-navbar {
+  margin-left: 25px;
+  width: calc(100% - 120px);
 }
 
-
-.navbar-icon {
+.counsellor-navbar-icon {
   position: absolute;
   top: -60px;
   left: 20px;
 }
 
-.navbar-icon img {
+.counsellor-navbar-icon img {
   height: 180px;
   width: 180px;
   margin-top: 5px;
   object-fit: contain;
 }
 
-
-.navbar-text {
+.counsellor-navbar-text {
   display: flex;
   gap: 4rem;
   align-items: center;
 }
 
-.navbar-text p {
+.counsellor-navbar-text p {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -83,7 +74,7 @@
   transition: color 0.2s;
 }
 
-.navbar-text p::after {
+.counsellor-navbar-text p::after {
   content: "";
   position: absolute;
   left: 0;
@@ -94,16 +85,15 @@
   transition: width 0.3s ease-in-out;
 }
 
-.navbar-text p:hover {
+.counsellor-navbar-text p:hover {
   color: #0C7FDA;
 }
 
-.navbar-text p:hover::after {
+.counsellor-navbar-text p:hover::after {
   width: 100%;
 }
 
-
-.signup {
+.counsellor-signup {
   background-color: #E9F5FE;
   color: #0C7FDA;
   padding: 7px 35px;
@@ -115,6 +105,7 @@
   cursor: pointer;
 }
 
-.signup p::after {
+.counsellor-signup p::after {
   display: none;
 }
+
