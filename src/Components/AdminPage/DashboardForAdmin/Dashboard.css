@@ -1,41 +1,44 @@
-.Dashboard {
+.dashboard-page {
   background-color: white;
   min-height: 75vh;
-  width:90.3%;
+  width: 91.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.5rem;
+  margin-left: 1.5rem;
   padding: 1rem 2rem;
   margin-top: 2rem;
+  border-radius: 3.66px;
+  
 }
 
-.chart-part {
+.dashboard-banner {
   width: 100%;
-  height: 200px;
+  height: 250px;
   background-color: #f5f5f5;
-  border-radius: 12px;
+  border-radius: 3.66px;
   margin-bottom: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.Data-privacy-text {
+.dashboard-quote {
   margin: 1rem;
   margin-top: 2rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  color:black;
+  color: black;
 }
 
-.box-part {
+.dashboard-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
 
-
-.fact-card {
+.dashboard-card {
   background-color: #c5dae1;
   padding: 1.5rem;
   border-radius: 3.66px;
@@ -44,26 +47,26 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.fact-card:hover {
+.dashboard-card:hover {
   transform: scale(1.02);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
 }
 
-.fact-number {
+.dashboard-card-number {
   font-size: 2rem;
   font-weight: bold;
   color: #2563eb;
   margin-bottom: 0.5rem;
 }
 
-.fact-title {
+.dashboard-card-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1f2937; 
+  color: #1f2937;
   margin-bottom: 0.25rem;
 }
 
-.fact-subtitle {
+.dashboard-card-subtext {
   font-size: 0.875rem;
-  color: #6b7280; 
+  color: #6b7280;
 }

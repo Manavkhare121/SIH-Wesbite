@@ -1,24 +1,23 @@
 import React, { useState } from "react";
+import { useBooking } from "../../ContextAPI/BookingContext.jsx";
 import "./BookingAppointment.css";
 
 const BookingAppointment = () => {
+  const { bookings, addBooking, updateBooking, deleteBooking } = useBooking();
   const [problem, setProblem] = useState("");
   const [date, setDate] = useState("");
   const [showProblemInput, setShowProblemInput] = useState(false);
   const [showDateInput, setShowDateInput] = useState(false);
-  const [bookings, setBookings] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
 
   const handleConfirm = () => {
     if (!problem || !date) return;
 
     if (editIndex !== null) {
-      const updated = [...bookings];
-      updated[editIndex] = { problem, date };
-      setBookings(updated);
+      updateBooking(editIndex, problem, date);
       setEditIndex(null);
     } else {
-      setBookings([...bookings, { problem, date }]);
+      addBooking(problem, date);
     }
 
     setProblem("");
@@ -35,30 +34,20 @@ const BookingAppointment = () => {
     setShowDateInput(true);
   };
 
-  const handleDelete = (index) => {
-    setBookings(bookings.filter((_, i) => i !== index));
-  };
-
   return (
     <div className="booking-container">
       <div className="dashboard-session-container">
-        <div className="dashboard-header">
-          <h1>Session Status</h1>
-        </div>
+        <div className="dashboard-header"><h1>Session Status</h1></div>
 
         <div className="dashboard-details">
           <div className="dashboard-details-left">
             <div className="dashboard-item">
-              <div
-                className="dashboard-box"
-                onClick={() => setShowProblemInput(!showProblemInput)}
-              >
+              <div className="dashboard-box" onClick={() => setShowProblemInput(!showProblemInput)}>
                 <h1>Problem</h1>
               </div>
               {showProblemInput && (
                 <input
                   type="text"
-                  placeholder="Enter your problem"
                   value={problem}
                   onChange={(e) => setProblem(e.target.value)}
                   className="dashboard-input"
@@ -67,10 +56,7 @@ const BookingAppointment = () => {
             </div>
 
             <div className="dashboard-item">
-              <div
-                className="dashboard-box"
-                onClick={() => setShowDateInput(!showDateInput)}
-              >
+              <div className="dashboard-box" onClick={() => setShowDateInput(!showDateInput)}>
                 <h1>Date</h1>
               </div>
               {showDateInput && (
@@ -100,20 +86,12 @@ const BookingAppointment = () => {
           bookings.map((b, i) => (
             <div key={i} className="booking-entry">
               <div>
-                <p>
-                  <strong>Problem:</strong> {b.problem}
-                </p>
-                <p>
-                  <strong>Date:</strong> {b.date}
-                </p>
+                <p><strong>Problem:</strong> {b.problem}</p>
+                <p><strong>Date:</strong> {b.date}</p>
               </div>
               <div className="booking-actions">
-                <button className="edit-btn" onClick={() => handleEdit(i)}>
-                  Edit
-                </button>
-                <button className="delete-btn" onClick={() => handleDelete(i)}>
-                  Delete
-                </button>
+                <button className="edit-btn" onClick={() => handleEdit(i)}>Edit</button>
+                <button className="delete-btn" onClick={() => deleteBooking(i)}>Delete</button>
               </div>
             </div>
           ))
@@ -124,3 +102,4 @@ const BookingAppointment = () => {
 };
 
 export default BookingAppointment;
+

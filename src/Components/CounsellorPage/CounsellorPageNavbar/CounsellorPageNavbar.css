@@ -1,6 +1,7 @@
 .counsellor-layout {
   display: flex;
   height: 100vh;
+  
 }
 
 .counsellor-sidebar-expanded {

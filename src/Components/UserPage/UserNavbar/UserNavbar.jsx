@@ -26,9 +26,9 @@ const UserNavbar = () => {
             <div className="user-navbar-text">
               <p>About Us</p>
               <p>Guide</p>
-              <p onClick={() => navigate(<LoginPage/>)}>Login</p>
+              <p onClick={() => navigate("/login")}>Login</p>
               <div className="user-signup">
-                <p>SignUp</p>
+                <p onClick={() => navigate("/Signup")}>SignUp</p>
               </div>
             </div>
           </div>

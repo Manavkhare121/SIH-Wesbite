@@ -1,49 +1,45 @@
-import { useState } from "react";
+import React from "react";
+import DashboardBanner from '../../../assets/Dashbord-banner.png';
 import "./Dashboard.css";
 
-const Dashboard = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+const Dashboard = ({ darkMode }) => {
   return (
-    <div className="Dashboard">
-      <div className="chart-part"></div>
+    <div className={`dashboard-page ${darkMode ? "dashboard-dark" : "dashboard-light"}`}>
+      <img src={DashboardBanner} alt="Classroom" className="dashboard-banner" />
 
-      <div className="Data-privacy-text">
-        <p>
-          "All data is 100% anonymous and aggregated to protect student
-          privacy."
-        </p>
-      </div>
+      <p className="dashboard-quote">
+        "All data is 100% anonymous and aggregated to protect student privacy."
+      </p>
 
-      <div className="box-part">
-        <div className="fact-card">
-          <h2 className="fact-number">12,000+</h2>
-          <p className="fact-title">Students Benefited</p>
-          <small className="fact-subtitle">
+      <div className="dashboard-cards">
+        <div className="dashboard-card">
+          <h2 className="dashboard-card-number dashboard-blue">12,000+</h2>
+          <p className="dashboard-card-title">Students Benefited</p>
+          <small className="dashboard-card-subtext">
             Direct student wellness support.
           </small>
         </div>
 
-        <div className="fact-card">
-          <h2 className="fact-number">100+</h2>
-          <p className="fact-title">Counselors Connected</p>
-          <small className="fact-subtitle">
+        <div className="dashboard-card">
+          <h2 className="dashboard-card-number dashboard-green">100+</h2>
+          <p className="dashboard-card-title">Counselors Connected</p>
+          <small className="dashboard-card-subtext">
             Bridging students with many experts.
           </small>
         </div>
 
-        <div className="fact-card">
-          <h2 className="fact-number">8+</h2>
-          <p className="fact-title">Languages Supported</p>
-          <small className="fact-subtitle">
+        <div className="dashboard-card">
+          <h2 className="dashboard-card-number dashboard-purple">8+</h2>
+          <p className="dashboard-card-title">Languages Supported</p>
+          <small className="dashboard-card-subtext">
             Multilingual accessibility across India.
           </small>
         </div>
 
-        <div className="fact-card">
-          <h2 className="fact-number">100%</h2>
-          <p className="fact-title">Anonymous Insights</p>
-          <small className="fact-subtitle">
+        <div className="dashboard-card">
+          <h2 className="dashboard-card-number dashboard-red">100%</h2>
+          <p className="dashboard-card-title">Anonymous Insights</p>
+          <small className="dashboard-card-subtext">
             Secure, aggregated data for admins.
           </small>
         </div>
@@ -53,6 +49,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
 
