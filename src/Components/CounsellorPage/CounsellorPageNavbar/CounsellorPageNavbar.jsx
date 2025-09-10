@@ -28,10 +28,7 @@ const CounsellorPage = () => {
 
         <div className="page-content">
           <Routes>
-            
-            <Route path="" element={<CounsellorPageDashboard />} />
-            
-            
+            <Route index element={<CounsellorPageDashboard />} />
           </Routes>
         </div>
       </div>
@@ -40,3 +37,4 @@ const CounsellorPage = () => {
 };
 
 export default CounsellorPage;
+

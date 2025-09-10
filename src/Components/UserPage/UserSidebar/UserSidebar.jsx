@@ -29,13 +29,13 @@ const UserSidebar = () => {
 
       <div className="user-sidebar-body">
         <div className="user-sidebar-links">
-          <div
-            className="user-sidebar-item"
-            onClick={() => navigate("/UserDashboard")}
-          >
-            <img src={dashboardicon} alt="dashboard" />
-            {expanded && <p>Dashboard</p>}
-          </div>
+         <div
+  className="user-sidebar-item"
+  onClick={() => navigate("/user/UserDashboard")} 
+>
+  <img src={dashboardicon} alt="dashboard" />
+  {expanded && <p>Dashboard</p>}
+</div>
 
            <div
             className="user-sidebar-item"
@@ -46,12 +46,12 @@ const UserSidebar = () => {
           </div>
 
           <div
-            className="user-sidebar-item"
-            onClick={() => navigate("/Booking")}
-          >
-            <img src={Booking} alt="booking" />
-            {expanded && <p>Booking Appointment</p>}
-          </div>
+  className="user-sidebar-item"
+  onClick={() => navigate("/user/appointment")}
+>
+  <img src={Booking} alt="booking" />
+  {expanded && <p> Appointment</p>}
+</div>
 
           <div className="user-sidebar-item">
             <img src={settingIcon} alt="settings" />

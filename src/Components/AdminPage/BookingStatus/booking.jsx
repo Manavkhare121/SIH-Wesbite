@@ -16,7 +16,7 @@ const Booking = () => {
             </div>
             <div className="details-box">
                 <div className="box-booking">
-              <h1>Number Studentt</h1>
+              <h1>Number Student</h1>
               </div>
                <div className="box-booking">
               <h1>Session Name</h1>

@@ -1,0 +1,146 @@
+.booking-container {
+  background-color: white;
+  min-height: 75vh;
+  width: 90.5%;
+  margin-left:1.4rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-session-container {
+  background-color: #E9F5FE;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c7fda;
+}
+
+.dashboard-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.dashboard-details-left {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  
+}
+
+.dashboard-box {
+  background-color:#0C7FDA;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dashboard-input {
+  margin-top: -0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.dashboard-details-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-button {
+  background:EE5353;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dashboard-button:hover {
+  background: #085fa3;
+}
+
+
+.booked-details {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.booked-details h2 {
+  color: #0c7fda;
+  margin-bottom: 1rem;
+}
+
+.booking-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.booking-entry p {
+  margin: 0;
+}
+
+.edit-btn {
+  background: #ff9800;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #e68900;
+}
+
+.no-booking {
+  color: gray;
+  font-style: italic;
+}
+.dashboard-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-btn {
+  background: #ee5353;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #d63f3f;
+}
+

@@ -4,10 +4,12 @@ import userimage from '../../../assets/Student image.webp';
 import UserSidebar from "../../UserPage/UserSidebar/UserSidebar";
 import UserDashboard from '../UserDashboard/UserDashboard.jsx';
 import { Routes, Route } from 'react-router-dom';
-
+import BookingAppointment from '../BookingAppointment/BookingAppointment.jsx'
+import { useNavigate } from "react-router-dom";
+import LoginPage from '../../LoginPage/LoginPage.jsx';
 const UserNavbar = () => {
   const [expanded, setExpanded] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <>
       <div className="user-layout">
@@ -22,9 +24,9 @@ const UserNavbar = () => {
               <img src={userimage} alt="logo" />
             </div>
             <div className="user-navbar-text">
-              <p>Home</p>
-              <p>Services</p>
-              <p>Login</p>
+              <p>About Us</p>
+              <p>Guide</p>
+              <p onClick={() => navigate(<LoginPage/>)}>Login</p>
               <div className="user-signup">
                 <p>SignUp</p>
               </div>
@@ -32,7 +34,8 @@ const UserNavbar = () => {
           </div>
            <div className="pages">
           <Routes>
-            <Route path="/UserDashboard" element={<UserDashboard />} />
+           <Route path="UserDashboard" element={<UserDashboard />} />
+  <Route path="appointment" element={<BookingAppointment />} />
             
           </Routes>
         </div>

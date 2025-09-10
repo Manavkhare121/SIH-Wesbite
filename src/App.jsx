@@ -3,16 +3,20 @@ import "./App.css";
 import Navbar from "./Components/AdminPage/NavbarForAdmin/Navbar.jsx";
 import CounsellorPage from "./Components/CounsellorPage/CounsellorPageNavbar/CounsellorPageNavbar.jsx";
 import UserNavbar from "./Components/UserPage/UserNavbar/UserNavbar.jsx";
-import UserDashboard from "./Components/UserPage/UserDashboard/UserDashboard.jsx";
+import LoginPage from "./Components/LoginPage/LoginPage.jsx";
+import SignupPage from "./Components/SignUp/SignUp.jsx";
+
 
 function App() {
   return (
     <Routes>
-     
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/Signup" element={<SignupPage/>}/>
+      <Route path="/user/*" element={<UserNavbar />} />
       <Route path="/*" element={<Navbar />} />
       <Route path="/counsellor/*" element={<CounsellorPage />}/>
-      <Route path="/User" element={<UserNavbar />} />
-      <Route path="/account" element={<UserDashboard/>}/>
+       
+      
     </Routes>
   );
 }

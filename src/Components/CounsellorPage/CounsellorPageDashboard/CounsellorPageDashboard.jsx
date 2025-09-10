@@ -3,6 +3,7 @@ import "./CounsellorPageDashboard.css";
 
 const CounsellorPageDashboard = () => {
   return (
+    <>
     <div className="counsellor-dashboard">
       <div className="dashboard-intro">
         <p>"All data is 100% anonymous and aggregated to protect student privacy."</p>
@@ -34,6 +35,7 @@ const CounsellorPageDashboard = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
