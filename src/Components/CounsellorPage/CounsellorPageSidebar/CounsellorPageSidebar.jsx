@@ -6,6 +6,7 @@ import Logouticon from "../../../assets/Logouticon.png";
 import themeicon from "../../../assets/themeicon.png";
 import ThinkFitimage from "../../../assets/ThinkFitimage.png";
 import settingIcon from "../../../assets/settingIcon.png";
+import Booking from "../../../assets/Booking.png"
 
 
 const CounsellorPageSidebar = () => {
@@ -30,9 +31,17 @@ const CounsellorPageSidebar = () => {
         <div className="counsellor-sidebar-links">
           <div
             className="counsellor-sidebar-item"
-            onClick={() => navigate("")}
+            onClick={() => navigate("/counsellor/CounsellorDashboard")}
           >
             <img src={dashboardicon} alt="dashboard" />
+            {extended && <p>Dashboard</p>}
+          </div>
+          <div
+            className="counsellor-sidebar-item"
+            onClick={()=>navigate("/counsellor/CounsellorBooking")}
+            
+          >
+            <img src={Booking} alt="booking" />
             {extended && <p>Session Status</p>}
           </div>
 

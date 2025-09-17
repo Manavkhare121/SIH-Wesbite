@@ -6,6 +6,7 @@ import UserNavbar from "./Components/UserPage/UserNavbar/UserNavbar.jsx";
 import LoginPage from "./Components/LoginPage/LoginPage.jsx";
 import SignupPage from "./Components/SignUp/SignUp.jsx";
 import Mainpage from './Components/Mainpage/Mainpage.jsx'
+import CounsellorPageDashboard from "./Components/CounsellorPage/CounsellorPageDashboard/CounsellorPageDashboard.jsx";
 function App() {
   return (
     <Routes>
@@ -14,7 +15,8 @@ function App() {
       <Route path="/Signup" element={<SignupPage/>}/>
       <Route path="/user/*" element={<UserNavbar />} />
       <Route path="/*" element={<Navbar />} />
-      <Route path="/counsellor/*" element={<CounsellorPage />}/>
+      <Route path="/counsellor/*" element={<CounsellorPage />} />
+      {/* <Route path="/counsellorPage" element={<CounsellorPageDashboard />}/> */}
     </Routes>
   );
 }

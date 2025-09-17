@@ -1,14 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .top-header-section {
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: space-between; 
   background-color: #ffffff;
-  box-shadow: none;
+  box-shadow: none; 
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.header-thinkfit {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -16,11 +25,29 @@
   margin-right: 0.75rem;
 }
 
-.brand-name { 
+.brand-name {
   font-size: 1.8rem;
-  font-weight: 700; 
+  font-weight: 700;
   color: #333;
 }
+
+.header-second-part {
+  display: flex;
+  gap: 2.5rem; 
+}
+
+.header-second-part a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-second-part a:hover {
+  color: #007bff; 
+}
+
 
 .intro-section {
   display: flex;
@@ -87,16 +114,17 @@
   text-align: center;
 }
 
+
 .challenges-container {
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: auto;
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 2rem; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .challenges-container h2 {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
   font-size: 2.5rem;
   font-weight: 700;
   color: #007bff;
@@ -110,7 +138,7 @@
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   text-align: left;
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
 
@@ -125,14 +153,14 @@
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 0.5rem;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .challenge-item .solution-desc {
   font-size: 1.1rem;
   font-weight: 500;
   color: #333;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .challenge-item .solution-desc strong {
@@ -140,7 +168,7 @@
 }
 
 .result-text {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
   font-size: 1.3rem;
   margin-top: 4rem;
   color: #333;
@@ -351,10 +379,16 @@
     text-align: center;
   }
   .top-header-section {
-    justify-content: center;
+    flex-direction: column; /* Stack header items on small screens */
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .header-second-part {
+    flex-direction: column; /* Stack nav links on small screens */
+    gap: 0.5rem;
   }
   .challenges-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
   .challenges-container h2 {
     font-size: 2rem;

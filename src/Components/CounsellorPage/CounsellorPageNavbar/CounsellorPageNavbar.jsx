@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import './CounsellorPageNavbar.css';
 import studentimage from '../../../assets/Student image.webp';
 import CounsellorPageSidebar from "../../CounsellorPage/CounsellorPageSidebar/CounsellorPageSidebar";
+import CounsellorPageBooking from '../CounsellorPageBooking/CounsellorPageBooking';
 import CounsellorPageDashboard from '../CounsellorPageDashboard/CounsellorPageDashboard';
 
 const CounsellorPage = () => {
@@ -28,7 +29,8 @@ const CounsellorPage = () => {
 
         <div className="page-content">
           <Routes>
-            <Route index element={<CounsellorPageDashboard />} />
+            <Route path="CounsellorBooking" element={<CounsellorPageBooking/>}/>
+            <Route path="CounsellorDashboard" element={<CounsellorPageDashboard />} /> 
           </Routes>
         </div>
       </div>
