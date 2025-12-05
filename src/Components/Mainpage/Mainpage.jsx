@@ -127,6 +127,36 @@ const Mainpage = () => {
                     </Link>
                   </div>
                 </div>
+                <div className="role-card" id="admin-role-card">
+    <div className="card-header">
+      <div className="icon-circle">
+        <span role="img" aria-label="gear" className="icon-lg">⚙️</span>
+      </div>
+      <h3 className="card-title">Admin Panel</h3>
+      <p className="card-description">
+        Oversee the platform, manage users, and ensure smooth operations
+      </p>
+    </div>
+    <div className="card-content">
+      <div className="card-points">
+        <div className="point">
+          <span role="img" aria-label="monitor" className="icon-sm">📊</span>
+          <span>Dashboard & analytics</span>
+        </div>
+        <div className="point">
+          <span role="img" aria-label="users" className="icon-sm">👤</span>
+          <span>Manage users & counselors</span>
+        </div>
+        <div className="point">
+          <span role="img" aria-label="shield" className="icon-sm">🔒</span>
+          <span>Ensure security & compliance</span>
+        </div>
+      </div>
+      <Link to="/admin">
+        <button className="cta-btn">Continue as Admin</button>
+      </Link>
+    </div>
+  </div>
 
             
                 <div className="role-card" id="counselor-role-card">

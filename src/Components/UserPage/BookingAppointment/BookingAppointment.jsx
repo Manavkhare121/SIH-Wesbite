@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useBooking } from "../../ContextAPI/BookingContext.jsx";
+import { useBooking } from "../../ContextAPI/Booking.jsx";
 import "./BookingAppointment.css";
 
 const BookingAppointment = () => {
