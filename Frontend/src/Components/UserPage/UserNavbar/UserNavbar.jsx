@@ -9,18 +9,13 @@ const UserNavbar = () => {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Show Dashboard ONLY when URL is exactly /user
   const showDashboard = location.pathname === "/user";
 
   return (
     <>
       <div className="user-layout">
-
-        {/* Sidebar */}
         <UserSidebar expanded={expanded} setExpanded={setExpanded} />
 
-        {/* Main Content */}
         <div
           className={`user-main-content ${
             expanded ? "user-sidebar-expanded" : "user-sidebar-collapsed"
@@ -44,13 +39,11 @@ const UserNavbar = () => {
             </div>
           </div>
 
-          {/* Nested Pages + Dashboard */}
+          
           <div className="UserDashboardpages">
 
-            {/* Outlet → Appointment, Chatbot, Settings etc. */}
-            <Outlet />
-
-            {/* Dashboard ONLY when URL is /user */}
+          
+            <Outlet/>
             {showDashboard && (
               <div className="user-dashboard">
                 <img src={Banner} alt="Classroom" className="user-banner" />
