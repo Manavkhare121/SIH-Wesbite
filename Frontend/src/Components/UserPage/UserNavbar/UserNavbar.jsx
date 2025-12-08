@@ -3,7 +3,7 @@ import './UserNavbar.css';
 import userimage from '../../../assets/Student image.webp';
 import UserSidebar from "../../UserPage/UserSidebar/UserSidebar";
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-import Banner from "../../../assets/Dashbord-banner.png";
+import Banner from "../../../assets/MainPoster.png";
 
 const UserNavbar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -14,7 +14,7 @@ const UserNavbar = () => {
   return (
     <>
       <div className="user-layout">
-        <UserSidebar expanded={expanded} setExpanded={setExpanded} />
+        <UserSidebar expanded={expanded}  setExpanded={setExpanded} />
 
         <div
           className={`user-main-content ${
@@ -48,9 +48,9 @@ const UserNavbar = () => {
               <div className="user-dashboard">
                 <img src={Banner} alt="Classroom" className="user-banner" />
 
-                <p className="user-quote">
+                {/* <p className="user-quote">
                   "All data is 100% anonymous and aggregated to protect student privacy."
-                </p>
+                </p> */}
 
                 <div className="user-cards">
                   <div className="user-card">

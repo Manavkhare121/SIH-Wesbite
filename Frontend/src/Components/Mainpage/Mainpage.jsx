@@ -4,7 +4,8 @@ import './Mainpage.css';
 
 import logo from '../../assets/ThinkFitimage.png';
 import mainimage from "../../assets/First_page_image.png";
-
+import Student from '../../assets/Student image.webp'
+import poster from '../../assets/poster.png'
 const Mainpage = () => {
   return (
     <>
@@ -15,22 +16,43 @@ const Mainpage = () => {
         </div>
         <div className="header-second-part">
           <HashLink to="#challenges-section">About Us</HashLink> 
-          <HashLink to="#user-role-card">User</HashLink>       
-          <HashLink to="#counselor-role-card">Counsellor</HashLink> 
+          <HashLink to="#user-role-card">Login</HashLink>       
         </div>
       </header>
 
       <section className="intro-section">
-        <div className="intro-content">
+        <div className="poster-img">
+          <img src={poster} alt="" />
+        </div>
+        {/* <div className="intro-content">
           <div className="intro-image-container">
             <img src={mainimage} alt="Wellness Platform" />
           </div>
           <div className="intro-text-container">
-            <p>We're building an <em>Integrated Campus Wellness Platform</em> not just an app.</p>
-            <p><strong>For students</strong>, it's a hub with an AI Chatbot, confidential counsellor booking, and mental health resources.</p>
-            <p><strong>For administration</strong>, it provides an <em>Anonymous Data Dashboard</em> to track and improve campus well-being.</p>
+           <p>
+  We're building an <em>Integrated Campus Wellness Platform</em> a unified space 
+  designed to support both student well-being and campus mental-health initiatives.
+</p>
+
+<p>
+  <strong><em>For Student</em></strong>, it serves as a personal wellness hub with an AI support 
+  chatbot, 24/7 guidance, confidential counsellor booking, mood tracking, stress checks, 
+  digital journaling, and curated mental-health resources — all in a safe, judgment-free 
+  space.
+</p>
+<p>
+  <strong><em>For administration</em></strong>, it provides an 
+  <em>Anonymous Wellness Dashboard</em> that highlights stress patterns, student 
+  engagement, and emotional trends, helping institutions make informed decisions and 
+  improve campus-wide well-being while keeping identities private.
+</p>
+
+<p>
+  Together, we’re building a healthier, more connected, and supportive campus community.
+</p>
+
           </div>
-        </div>
+        </div> */}
       </section>
 
 
@@ -79,6 +101,7 @@ const Mainpage = () => {
 
       <div className="landing-page">
         <section className="hero-section">
+          
           <div className="hero-content">
             <div className="hero-text">
               <div className="tagline">
@@ -122,8 +145,40 @@ const Mainpage = () => {
                         <span>Secure & confidential</span>
                       </div>
                     </div>
-                    <Link to="/user/login">
+                    <Link to="/login">
                       <button className="cta-btn">Continue as User</button>
+                    </Link>
+                  </div>
+                </div>
+              <div className="role-card" id="counselor-role-card">
+                  <div className="card-header">
+                    <div className="icon-circle">
+                      <span role="img" aria-label="brain" className="icon-lg">🧠</span>
+                    </div>
+                    <h3 className="card-title">I'm a counselor</h3>
+                    <p className="card-description">
+                      Manage your practice and provide professional mental health support
+                    </p>
+                  </div>
+                  <div className="card-content">
+                    <div className="card-points">
+                      <div className="point">
+                        <span role="img" aria-label="users" className="icon-sm">👥</span>
+                        <span>Manage patient sessions</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
+                        <span>Real-time chat system</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="calendar" className="icon-sm">📅</span>
+                        <span>Session scheduling</span>
+                      </div>
+                    </div>
+                    <Link to="/login">
+                      <button className="cta-btn">
+                        Continue as Counsellor
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -152,45 +207,11 @@ const Mainpage = () => {
           <span>Ensure security & compliance</span>
         </div>
       </div>
-      <Link to="/admin">
+      <Link to="/login">
         <button className="cta-btn">Continue as Admin</button>
       </Link>
     </div>
   </div>
-
-            
-                <div className="role-card" id="counselor-role-card">
-                  <div className="card-header">
-                    <div className="icon-circle">
-                      <span role="img" aria-label="brain" className="icon-lg">🧠</span>
-                    </div>
-                    <h3 className="card-title">I'm a counselor</h3>
-                    <p className="card-description">
-                      Manage your practice and provide professional mental health support
-                    </p>
-                  </div>
-                  <div className="card-content">
-                    <div className="card-points">
-                      <div className="point">
-                        <span role="img" aria-label="users" className="icon-sm">👥</span>
-                        <span>Manage patient sessions</span>
-                      </div>
-                      <div className="point">
-                        <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
-                        <span>Real-time chat system</span>
-                      </div>
-                      <div className="point">
-                        <span role="img" aria-label="calendar" className="icon-sm">📅</span>
-                        <span>Session scheduling</span>
-                      </div>
-                    </div>
-                    <Link to="/counsellor">
-                      <button className="cta-btn">
-                        Continue as Counsellor
-                      </button>
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -198,6 +219,7 @@ const Mainpage = () => {
         <section className="features-section">
           <div className="features-container">
             <div className="features-header">
+              <img src={Student} alt="" height="200px" />
               <h2>Why Choose Our Platform?</h2>
               <p>
                 Professional, secure, and accessible mental health support designed

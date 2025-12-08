@@ -31,7 +31,7 @@ const UserSidebar = () => {
         <div className="user-sidebar-links">
          <div
   className="user-sidebar-item"
-  onClick={() => navigate("/user/UserDashboard")} 
+  onClick={() => navigate("/user")} 
 >
   <img src={dashboardicon} alt="dashboard" />
   {expanded && <p>Dashboard</p>}
@@ -41,7 +41,7 @@ const UserSidebar = () => {
             className="user-sidebar-item"
           >
             <img src={Chatbot} alt="booking" />
-            {expanded && <p>AI Chatbot</p>}
+            {expanded && <p>Chatbot</p>}
           </div>
 
           <div
@@ -52,7 +52,7 @@ const UserSidebar = () => {
   {expanded && <p> Appointment</p>}
 </div>
 
-          <div className="user-sidebar-item">
+          <div className="user-sidebar-item" >
             <img src={settingIcon} alt="settings" />
             {expanded && <p>Settings</p>}
           </div>
@@ -63,7 +63,7 @@ const UserSidebar = () => {
             <img src={themeicon} alt="theme" />
             {expanded && <p>Dark Theme</p>}
           </div>
-          <div className="user-sidebar-logout">
+          <div className="user-sidebar-logout"  onClick={() => navigate("/login")}>
             <img src={Logouticon} alt="logout" />
             {expanded && <p>Logout</p>}
           </div>

@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 .top-header-section {
@@ -48,16 +48,20 @@ html {
   color: #007bff; 
 }
 
+.poster-img img{
+  width:100%;
+  max-height:100%;
+}
 
-.intro-section {
+/* .intro-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 60px);
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #333;
+  padding: 3rem 2rem;
+  background-color:#007bff;;
+  color: #fff;
   text-align: center;
 }
 
@@ -65,7 +69,7 @@ html {
   display: flex;
   align-items: center;
   gap: 5rem;
-  max-width: 1200px;
+  max-width: 1350px;
   width: 100%;
 }
 
@@ -78,7 +82,7 @@ html {
 
 .intro-image-container img {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -102,14 +106,14 @@ html {
 }
 
 .intro-text-container em {
-  color: #007bff;
+  color:#333;
   font-style: normal;
   font-weight: 600;
-}
+} */
 
 .challenges-solutions-section {
-  background-color: #f8f9fa;
-  padding: 5rem 2rem;
+  background-color:#f8f9fa;
+  padding: 4rem 2rem;
   color: #333;
   text-align: center;
 }
@@ -170,7 +174,7 @@ html {
 .result-text {
   grid-column: 1 / -1;
   font-size: 1.3rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   color: #333;
   line-height: 1.6;
   text-align: center;
@@ -228,10 +232,10 @@ html {
 }
 
 .role-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
   gap: 2rem;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: auto;
 }
 
@@ -325,7 +329,7 @@ html {
 
 .features-section {
   background: #f3f4f6;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   color: #1f2937;
 }
 

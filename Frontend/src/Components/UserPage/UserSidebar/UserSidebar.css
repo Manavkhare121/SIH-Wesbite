@@ -65,9 +65,12 @@
 }
 
 .user-sidebar-item:hover,
-.user-sidebar-theme:hover,
-.user-sidebar-logout:hover {
+.user-sidebar-theme:hover{
   background-color: #e9f5fe;
+}
+
+.user-sidebar-logout:hover {
+   background-color: black;
 }
 
 .user-sidebar-item img,
@@ -82,3 +85,5 @@
   color: #fff;
   border-radius: 6px;
 }
+
+

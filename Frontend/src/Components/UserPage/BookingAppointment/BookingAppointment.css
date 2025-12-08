@@ -1,11 +1,10 @@
 .booking-container {
   background-color: white;
   min-height: 75vh;
-  width: 91.5%;
-  margin-left:1.4rem;
-  margin-top: 2rem;
+  width: calc(100% - 120px);
+  margin: 1.5rem;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 3.66px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
