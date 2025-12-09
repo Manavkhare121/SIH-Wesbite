@@ -9,6 +9,8 @@ import Mainpage from './Components/Mainpage/Mainpage.jsx'
 import CounsellorPageDashboard from "./Components/CounsellorPage/CounsellorPageDashboard/CounsellorPageDashboard.jsx";
 import Appointment from "./Components/UserPage/BookingAppointment/BookingAppointment.jsx"
 import Dashboard from "./Components/AdminPage/DashboardForAdmin/Dashboard.jsx";
+import Chatbot from "./Components/UserPage/ChatbotPage/Chatbot.jsx"
+
 function App() {
   return (
     <Routes>
@@ -17,6 +19,7 @@ function App() {
       <Route path="/user/*" element={<UserNavbar />}>
     <Route path="appointment" element={<Appointment />} />
     <Route path="UserDashboard" element={<Dashboard />} />
+    <Route path="Chatbot" element={<Chatbot/>}/>
 </Route>
       <Route path="/" element={<Mainpage/>} />
       <Route path="/counsellor/*" element={<CounsellorPage />} />

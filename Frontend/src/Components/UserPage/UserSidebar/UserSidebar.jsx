@@ -39,8 +39,9 @@ const UserSidebar = () => {
 
            <div
             className="user-sidebar-item"
+             onClick={() => navigate("/user/Chatbot")}
           >
-            <img src={Chatbot} alt="booking" />
+            <img src={Chatbot} alt="chatbot" />
             {expanded && <p>Chatbot</p>}
           </div>
 
