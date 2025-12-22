@@ -3,12 +3,13 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { FaUser, FaLock, FaFacebookF, FaGoogle, FaTwitter } from 'react-icons/fa';
 import './SignUp.css';
-import Studentimage from '../../assets/Student image.webp'
+import Studentimage from '../../assets/Student image.webp';
+import { useNavigate } from 'react-router-dom';
 
 const SignupPage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const password = watch('password');
-
+    const navigate=useNavigate();
     const onSubmit = (data) => {
         console.log('Signup attempt with:', data);
         toast.success('Signed up successfully!');
@@ -27,7 +28,7 @@ const SignupPage = () => {
                 />
 
                 <form onSubmit={handleSubmit(onSubmit)} className="signup-form" autoComplete="off">
-                   
+                    
                     <div className="input-group">
                         <FaUser className="input-icon" />
                         <input
@@ -38,7 +39,6 @@ const SignupPage = () => {
                         />
                     </div>
 
-                    
                     <div className="input-group">
                         <FaLock className="input-icon" />
                         <input
@@ -49,7 +49,6 @@ const SignupPage = () => {
                         />
                     </div>
 
-                    
                     <div className="input-group">
                         <FaLock className="input-icon" />
                         <input
@@ -63,18 +62,15 @@ const SignupPage = () => {
                         />
                     </div>
 
-                    
-                    <button type="submit" className="signup-btn">
+                    <button type="submit" className="signup-btn" onClick={()=>{navigate("/user")}}>
                         Sign Up
                     </button>
                 </form>
 
-                
                 <div className="divider">
                     <span>or</span>
                 </div>
 
-                {/* Social Signup Buttons */}
                 <div className="social-buttons">
                     <button className="social-btn facebook">
                         <FaFacebookF />
@@ -86,6 +82,13 @@ const SignupPage = () => {
                         <FaTwitter />
                     </button>
                 </div>
+
+                
+                <div className="login-section">
+                    <p>Already have an account? <a href="/login" className="login-link-btn">Login</a></p>
+                </div>
+                
+
             </div>
         </div>
     );

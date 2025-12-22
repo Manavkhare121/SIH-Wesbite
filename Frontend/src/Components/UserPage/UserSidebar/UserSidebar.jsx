@@ -7,7 +7,7 @@ import themeicon from "../../../assets/themeicon.png";
 import ThinkFitimage from "../../../assets/ThinkFitimage.png";
 import settingIcon from "../../../assets/settingIcon.png";
 import Booking from "../../../assets/Booking.png";
-import Chatbot from '../../../assets/Chatbot.png'
+import Chatbot from "../../../assets/Chatbot.png";
 
 const UserSidebar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -29,31 +29,33 @@ const UserSidebar = () => {
 
       <div className="user-sidebar-body">
         <div className="user-sidebar-links">
-         <div
-  className="user-sidebar-item"
-  onClick={() => navigate("/user")} 
->
-  <img src={dashboardicon} alt="dashboard" />
-  {expanded && <p>Dashboard</p>}
-</div>
+          <div className="user-sidebar-item" onClick={() => navigate("/user")}>
+            <img src={dashboardicon} alt="dashboard" />
+            {expanded && <p>Dashboard</p>}
+          </div>
 
-           <div
+          <div
             className="user-sidebar-item"
-             onClick={() => navigate("/user/Chatbot")}
+            onClick={() => navigate("/user/Chatbot")}
           >
             <img src={Chatbot} alt="chatbot" />
             {expanded && <p>Chatbot</p>}
           </div>
 
           <div
-  className="user-sidebar-item"
-  onClick={() => navigate("/user/appointment")}
->
-  <img src={Booking} alt="booking" />
-  {expanded && <p> Appointment</p>}
-</div>
+            className="user-sidebar-item"
+            onClick={() => navigate("/user/appointment")}
+          >
+            <img src={Booking} alt="booking" />
+            {expanded && <p> Appointment</p>}
+          </div>
 
-          <div className="user-sidebar-item" >
+           <div className="user-sidebar-item"  onClick={() => navigate("/user/Resource")} >
+            <img src={settingIcon} alt="ResourcePage" />
+            {expanded && <p>Resources</p>}
+          </div>
+
+          <div className="user-sidebar-item">
             <img src={settingIcon} alt="settings" />
             {expanded && <p>Settings</p>}
           </div>
@@ -64,7 +66,10 @@ const UserSidebar = () => {
             <img src={themeicon} alt="theme" />
             {expanded && <p>Dark Theme</p>}
           </div>
-          <div className="user-sidebar-logout"  onClick={() => navigate("/login")}>
+          <div
+            className="user-sidebar-logout"
+            onClick={() => navigate("/login")}
+          >
             <img src={Logouticon} alt="logout" />
             {expanded && <p>Logout</p>}
           </div>

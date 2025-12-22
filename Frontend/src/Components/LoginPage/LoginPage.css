@@ -192,3 +192,24 @@
 .twitter {
   color: #1da1f2;
 }
+
+/* --- NEW SIGN UP STYLES START --- */
+.signup-section {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.signup-link-btn {
+  color: #0C7FDA; /* Matches the background color */
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.signup-link-btn:hover {
+  color: #005bb5; /* Darker blue on hover */
+  text-decoration: underline;
+}
+/* --- NEW SIGN UP STYLES END --- */

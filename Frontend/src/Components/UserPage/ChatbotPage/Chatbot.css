@@ -86,3 +86,32 @@
     border:1px solid #333;
 }
 
+.new-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C7FDA;
+    margin: 1rem;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius:3.66px;
+    gap:7px;
+}
+
+.new-chat-show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0C7FDA;
+    margin: 1rem;
+    padding: 10px;
+    border-radius:3.66px;
+}
+
+.new-chat-show .delete-icon{
+    color:#0C7FDA
+}
+.new-chat-show .delete-icon:hover{
+    color:#000
+}

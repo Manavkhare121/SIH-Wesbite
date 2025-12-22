@@ -10,7 +10,7 @@ import CounsellorPageDashboard from "./Components/CounsellorPage/CounsellorPageD
 import Appointment from "./Components/UserPage/BookingAppointment/BookingAppointment.jsx"
 import Dashboard from "./Components/AdminPage/DashboardForAdmin/Dashboard.jsx";
 import Chatbot from "./Components/UserPage/ChatbotPage/Chatbot.jsx"
-
+import Resource from "./Components/UserPage/ResourcePage/Resource.jsx";
 function App() {
   return (
     <Routes>
@@ -20,6 +20,7 @@ function App() {
     <Route path="appointment" element={<Appointment />} />
     <Route path="UserDashboard" element={<Dashboard />} />
     <Route path="Chatbot" element={<Chatbot/>}/>
+    <Route path="Resource" element={<Resource/>}/>
 </Route>
       <Route path="/" element={<Mainpage/>} />
       <Route path="/counsellor/*" element={<CounsellorPage />} />

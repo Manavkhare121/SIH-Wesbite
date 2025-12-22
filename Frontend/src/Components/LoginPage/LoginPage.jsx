@@ -3,11 +3,12 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { FaUser, FaLock, FaFacebookF, FaGoogle, FaTwitter } from 'react-icons/fa';
 import "./LoginPage.css";
-import StudentImage from '../../assets/Student image.webp'
+import StudentImage from '../../assets/Student image.webp'; // Ensure path is correct
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-
+  const navigate=useNavigate()
   const onSubmit = (data) => {
     console.log('Login attempt with:', data);
     toast.success('Logged in successfully!');
@@ -58,7 +59,7 @@ const LoginPage = () => {
             <a href="#" className="forgot-link">Forgot Password?</a>
           </div>
 
-          <button type="submit" className="login-btn">
+          <button type="submit" className="login-btn" onClick={()=>navigate("/user")}>
             Login
           </button>
         </form>
@@ -66,15 +67,21 @@ const LoginPage = () => {
         <div className="divider">
           <span>or</span>
         </div>
+        
         <div className="social-buttons">
           <button className="social-btn facebook"><FaFacebookF /></button>
           <button className="social-btn google"><FaGoogle /></button>
           <button className="social-btn twitter"><FaTwitter /></button>
         </div>
+
+        
+        <div className="signup-section">
+          <p>Don't have an account? <a href="/signup" className="signup-link-btn">Sign up</a></p>
+        </div>
+
       </div>
     </div>
   );
 };
 
 export default LoginPage;
-

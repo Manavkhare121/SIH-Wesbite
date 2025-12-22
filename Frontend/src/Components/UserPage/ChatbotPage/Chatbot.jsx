@@ -23,7 +23,7 @@ const Chatbot = () => {
                     <i class="ri-add-line"></i>
                 </div>
                 <div className="new-chat">
-                    Start New Chat
+                    Add Chat
                 </div>
             </div>
             <div className="new-chat-show">
