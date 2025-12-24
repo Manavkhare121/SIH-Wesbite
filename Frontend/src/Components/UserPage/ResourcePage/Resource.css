@@ -163,7 +163,7 @@
 .feature-card {
   background:#fff;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 3.66px;
   text-align: center;
   transition: transform 0.2s;
   border: 1px solid #0C7FDA;
@@ -192,7 +192,7 @@
   background: #0C7FDA;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 3.66px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -210,7 +210,7 @@
 .exercise-card {
   background:#fff;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 3.66px;
   border: 1px solid #c3e6cb;
 }
 
@@ -254,7 +254,7 @@
   min-width: 80px;
   background: white;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 3.66px;
   text-align: center;
   font-size: 0.85rem;
   border: 1px solid #0C7FDA;
@@ -273,8 +273,8 @@
   background: #fff;
   text-decoration: none;
   color: #000;
-  border-radius: 8px;
-  border-left: 4px solid #9b59b6;
+  border-radius: 3.66px;
+  border-left: 4px solid #0C7FDA;
   transition: background 0.2s;
 }
 

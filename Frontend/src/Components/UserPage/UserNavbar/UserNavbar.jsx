@@ -48,9 +48,7 @@ const UserNavbar = () => {
               <div className="user-dashboard">
                 <img src={Banner} alt="Classroom" className="user-banner" />
 
-                {/* <p className="user-quote">
-                  "All data is 100% anonymous and aggregated to protect student privacy."
-                </p> */}
+                
 
                 <div className="user-cards">
                   <div className="user-card">

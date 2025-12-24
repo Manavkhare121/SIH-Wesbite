@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useBooking } from "../../ContextAPI/Booking.jsx";
 import "./BookingAppointment.css";
+import { useNavigate } from "react-router-dom";
 
 const BookingAppointment = () => {
   const { bookings, addBooking, updateBooking, deleteBooking } = useBooking();
@@ -9,6 +10,8 @@ const BookingAppointment = () => {
   const [showProblemInput, setShowProblemInput] = useState(false);
   const [showDateInput, setShowDateInput] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
+
+  const navigate=useNavigate()
 
   const handleConfirm = () => {
     if (!problem || !date) return;
@@ -68,6 +71,12 @@ const BookingAppointment = () => {
                 />
               )}
             </div>
+            <div className="dashboard-item">
+              <div className="dashboard-box" onClick={() => navigate("/user/Chatting")}>
+                <h1>Counsellor Chat</h1>
+              </div>
+              
+            </div>
           </div>
 
           <div className="dashboard-details-right">
@@ -88,6 +97,7 @@ const BookingAppointment = () => {
               <div>
                 <p><strong>Problem:</strong> {b.problem}</p>
                 <p><strong>Date:</strong> {b.date}</p>
+                <p><strong>Status:</strong>Pending</p>
               </div>
               <div className="booking-actions">
                 <button className="edit-btn" onClick={() => handleEdit(i)}>Edit</button>

@@ -11,6 +11,7 @@ import Appointment from "./Components/UserPage/BookingAppointment/BookingAppoint
 import Dashboard from "./Components/AdminPage/DashboardForAdmin/Dashboard.jsx";
 import Chatbot from "./Components/UserPage/ChatbotPage/Chatbot.jsx"
 import Resource from "./Components/UserPage/ResourcePage/Resource.jsx";
+import Chatting from "./Components/UserPage/ChatWithCounsellor/Chatting.jsx"
 function App() {
   return (
     <Routes>
@@ -21,6 +22,7 @@ function App() {
     <Route path="UserDashboard" element={<Dashboard />} />
     <Route path="Chatbot" element={<Chatbot/>}/>
     <Route path="Resource" element={<Resource/>}/>
+    <Route path="chatting" element={<Chatting/>}/>
 </Route>
       <Route path="/" element={<Mainpage/>} />
       <Route path="/counsellor/*" element={<CounsellorPage />} />

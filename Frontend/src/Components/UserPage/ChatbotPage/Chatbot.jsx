@@ -7,6 +7,10 @@ const Chatbot = () => {
   return (
     <div className="chatbot-navbar">
        <div className="chat-contain">
+       <div className="text-part">
+         <h1>Welcome To Our AI Therapist</h1>
+         <p>leading to healthier, happier, and more productive lives</p>
+       </div>
          <div className="chat-left">
            <div className={`search-box ${active ? 'active' : ''}`} onClick={()=>setActive(!active)}>
              <div className="search">
