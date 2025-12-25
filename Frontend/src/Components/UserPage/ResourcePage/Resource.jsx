@@ -2,6 +2,7 @@ import React from 'react'
 import { Phone, MessageCircle, User, BookOpen, Video, AlertTriangle } from 'lucide-react';
 import './Resource.css'
 import { useNavigate } from 'react-router-dom';
+import resource from '../../../assets/resource.png'
 const Resource = () => {
   const navigate=useNavigate();
   return (
@@ -14,7 +15,7 @@ const Resource = () => {
             </p>
           </div>
           <img 
-              src=""
+              src={resource}
               alt="Wellness Mascot" 
               className="header-image"
           />

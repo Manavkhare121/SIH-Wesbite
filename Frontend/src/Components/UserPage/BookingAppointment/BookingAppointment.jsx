@@ -73,7 +73,13 @@ const BookingAppointment = () => {
             </div>
             <div className="dashboard-item">
               <div className="dashboard-box" onClick={() => navigate("/user/Chatting")}>
-                <h1>Counsellor Chat</h1>
+                <h1>Chatting</h1>
+              </div>
+              
+            </div>
+            <div className="dashboard-item">
+              <div className="dashboard-box" onClick={() => navigate("/user/Chatting")}>
+                <h1>Counsellor</h1>
               </div>
               
             </div>

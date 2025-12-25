@@ -51,13 +51,15 @@
 
 .chatting-input-field {
   width: 100%;
+  height: 100%;
 }
 
 .chatting-input-field input {
   width: 100%;
+  height: 100%;
   font-size: 1.1rem;
   color: #000;
-  background-color: #0C7FDA;
+  background-color:#0C7FDA;
   border: none;
   outline: none;
   box-shadow: none;

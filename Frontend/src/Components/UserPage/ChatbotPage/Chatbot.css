@@ -21,10 +21,11 @@
     gap:10px;
     
 }
+
 .text-part{
     position: absolute;
     top:45%;
-    right:39%;
+    margin-right:10rem;
     font-size: 1rem;
     color:#000;
 }
@@ -32,6 +33,7 @@
     font-size: 0.8rem;
     color:#444;
 }
+
 .chat-left{
     background-color: #c5dae1;
     width:85%;
@@ -87,6 +89,7 @@
     font-size: 1.7rem;
     height:20px;
     width: 30px;
+    cursor:pointer
 }
 .search-img i{
     rotate: calc(45deg);
